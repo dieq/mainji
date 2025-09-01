@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图像测量工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <button id="lineBtn" class="tool-btn">绘制直线</button>
+            <button id="resetLineBtn" class="tool-btn">重置直线</button>
+            <button id="polygonBtn" class="tool-btn">绘制多边形</button>
+            <button id="resetPolygonBtn" class="tool-btn">重置多边形</button>
+            <button id="saveBtn" class="tool-btn">保存平面图</button>
+            <button id="loadBtn" class="tool-btn">加载平面图</button>
+            <div class="file-upload">
+                <label for="imageUpload" class="tool-btn" id="newBtn">上传图片</label>
+                <input type="file" id="imageUpload" accept="image/*" style="display:none">
+            </div>
+            <button id="urlBtn" class="tool-btn">输入图片URL</button>
+            <button id="zoomInBtn" class="tool-btn">+25%</button>
+            <button id="zoomOutBtn" class="tool-btn">-25%</button>
+        </div>
+        <div class="canvas-container">
+            <canvas id="drawingCanvas"></canvas>
+        </div>
+        <div class="info-panel">
+            <div id="lengthPanel" class="panel">
+                <h3>直线长度</h3>
+                <div id="lengthResult">未测量</div>
+                <div id="lengthInput" class="input-group" style="display: none;">
+                    <label for="realLength">输入实际长度:</label>
+                    <input type="number" id="realLength" min="0" step="0.01">
+                    <select id="lengthUnit">
+                        <option value="m">米</option>
+                        <option value="cm">厘米</option>
+                        <option value="mm">毫米</option>
+                    </select>
+                    <button id="confirmLength">确认</button>
+                </div>
+            </div>
+            <div id="areaPanel" class="panel">
+                <h3>多边形面积</h3>
+                <div id="areaResult">未测量</div>
+            </div>
+            <div class="panel">
+                <h3>提示</h3>
+                <div class="tip">点击"加载平面图"按钮可以加载已保存的平面图</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

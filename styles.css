@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tool-btn {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.tool-btn:hover {
+    background-color: #45a049;
+}
+
+.tool-btn.active {
+    background-color: #2E7D32;
+}
+
+#saveBtn {
+    background-color: #2196F3;
+}
+
+#saveBtn:hover {
+    background-color: #0b7dda;
+}
+
+#newBtn {
+    background-color: #FF9800;
+}
+
+#newBtn:hover {
+    background-color: #e68a00;
+}
+
+#loadBtn {
+    background-color: #9C27B0;
+}
+
+#loadBtn:hover {
+    background-color: #7B1FA2;
+}
+
+#urlBtn {
+    background-color: #00BCD4;
+}
+
+#urlBtn:hover {
+    background-color: #0097A7;
+}
+
+#zoomInBtn {
+    background-color: #FF5722;
+}
+
+#zoomInBtn:hover {
+    background-color: #E64A19;
+}
+
+#zoomOutBtn {
+    background-color: #FF5722;
+}
+
+#zoomOutBtn:hover {
+    background-color: #E64A19;
+}
+
+.file-upload {
+    display: inline-block;
+}
+
+.canvas-container {
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.info-panel {
+    display: flex;
+    gap: 20px;
+}
+
+.panel {
+    flex: 1;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.panel h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.input-group {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input, select {
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#confirmLength {
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#lengthResult, #areaResult {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.tip {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
